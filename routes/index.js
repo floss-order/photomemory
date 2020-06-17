@@ -4,7 +4,10 @@ const router = express.Router()
 
 //Index page
 router.get('/', (req, res) => {
-    res.sendFile('/home/floss/Downloads/dev.png')
+    const page = {
+        title: 'PhotoMemory'
+    }
+    res.render('index.ejs', { page })
 })
 
 
