@@ -1,24 +1,18 @@
-const instamancer = require('instamancer')
+const instaTouch = require('instatouch')
+//const path = require('path')
 
-
-const options = {
-    total: 0,
-    headless: false,
-    userDataDir: './userData'
-}
-let user = instamancer.createApi('user', 'ggntu_highpark', options)
-
-async function getPosts() {
+module.exports = async function startParse(account) {
     try {
-        for await (const post of user.generator()) {
-            console.log(post)
+        const options = { 
+            download: false,
+            mediaType: 'image',
+            //filepath: path.join(__dirname, 'scraped'),
+            //filetype: `json`
         }
+        const userImage = await instaTouch.user(account, options)
+        return userImage
+        
+    } catch (error) {
+        throw error
     }
-
-    catch(e) {
-        console.log(e)
-    }
-
 }
-
-getPosts()
