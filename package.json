@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "instamancer": "^3.3.1",
+    "instatouch": "^2.2.7",
     "nodemon": "^2.0.4"
   },
   "devDependencies": {

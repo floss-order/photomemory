@@ -1,12 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
+const instaparse = require('../parser/instagram/instaparse.js')
 
 
 //Index page
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+    let data = await instaparse.startParse('ggntu_highpark')
     const page = { title: 'PhotoMemory' }
-    res.render('index.ejs', { page })
+    res.render('index.ejs', { page, data })
 })
 
 router.post('/', (req, res) => {

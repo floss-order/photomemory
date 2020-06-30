@@ -1,7 +1,7 @@
 const instaTouch = require('instatouch')
 //const path = require('path')
 
-module.exports = async function startParse(account) {
+async function startParse(account) {
     try {
         const options = { 
             download: false,
@@ -16,3 +16,5 @@ module.exports = async function startParse(account) {
         throw error
     }
 }
+
+module.exports = { startParse }

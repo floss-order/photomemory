@@ -3,3 +3,13 @@
     <input type="text" name="profile" id="profile">
     <button type="submit">Искать</button>
 </form>
+
+<% for(let i = 0; i < data.collector.length; i++) {%>
+    <img src="<%= data.collector[i].display_url %>" alt="" srcset="">
+<%}%>
+
+<style>
+    img {
+        height: 300px;
+    }
+</style>
