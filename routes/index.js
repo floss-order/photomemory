@@ -6,9 +6,9 @@ const instaparse = require('../parser/instagram/instaparse.js')
 
 //Index page
 router.get('/', async (req, res) => {
-    let data = await instaparse.startParse('ggntu_highpark')
+    //let data = await instaparse.startParse('ggntu_highpark')
     const page = { title: 'PhotoMemory' }
-    res.render('index.ejs', { page, data })
+    res.render('index.ejs', { page })
 })
 
 router.post('/', (req, res) => {
