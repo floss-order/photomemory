@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  padding: 0 5rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+header nav {
+  font-family: "Nunito", sans-serif;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav li {
+  margin-left: 5rem;
+}
+header nav a {
+  color: black;
+  font-weight: 300;
+  font-size: 1.5625rem;
+  text-decoration: none;
+}
+header nav a.sign-up {
+  color: white;
+  background: #788BFF;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0px 0px 10px #788BFF;
+  border: none;
+  border-radius: 0.625rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  color: white;
+  background-color: #788BFF;
+}
+.hero-section h1 {
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+.hero-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+}
+.hero-section form label {
+  font-weight: 500;
+}
+.hero-section form input {
+  margin-top: 2.5rem;
+  min-width: 80vw;
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  border: none;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=main.css.map */
