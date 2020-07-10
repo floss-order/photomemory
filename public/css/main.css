@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .wrap {
@@ -74,6 +75,66 @@ header nav a.sign-up {
   border: none;
   font-size: 1.875rem;
   font-weight: 400;
+}
+
+.account-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.account-section h1 {
+  margin: 2.5rem 0;
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+.account-section .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20vw;
+  padding: 5rem;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.account-section .card .card-avatar .card__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: black;
+}
+.account-section .card .card-avatar p {
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.875rem;
+}
+.account-section .card .card-selection {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 40px auto;
+  text-align: center;
+}
+.account-section .card .card-selection h4 {
+  font-weight: 500;
+  font-size: 1.875rem;
+}
+.account-section .card .card-selection .card-selection-icon {
+  margin-top: 40px;
+  padding: 1em 1em;
+  border-radius: 0.625rem;
+  transition: 0.5s ease-in-out;
+}
+.account-section .card .card-selection .card-selection-icon p {
+  font-size: 1.5625rem;
+}
+.account-section .card .card-selection .card-selection-icon:hover {
+  background-color: darkgray;
+}
+.account-section .card small {
+  font-size: 1.25rem;
+  color: #737372;
 }
 
 /*# sourceMappingURL=main.css.map */
