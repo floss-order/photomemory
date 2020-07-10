@@ -4,6 +4,12 @@ const accountSection = document.querySelector('.account-section')
 const footer = document.querySelector('footer')
 
 
+form.addEventListener('submit', async event => {
+    event.preventDefault()
+    showAll()
+    await sendProfile()
+})
+
 function showAll() {
     // selectors.forEach(selector => selector.classList.remove('hidden'))
     accountSection.classList.remove('hidden')
