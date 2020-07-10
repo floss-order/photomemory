@@ -146,4 +146,8 @@ footer {
   height: 18.75em;
 }
 
+.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=main.css.map */
