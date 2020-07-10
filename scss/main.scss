@@ -159,6 +159,16 @@ header {
         small {
             font-size: 1.25rem;
             color: #737372;
+
+            a {
+                color: #737372;
+            }
         }
     }
+}
+
+footer {
+    margin-top: 2.5em;
+    background-color: black;
+    height: 18.75em;
 }

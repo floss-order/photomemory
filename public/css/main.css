@@ -136,5 +136,14 @@ header nav a.sign-up {
   font-size: 1.25rem;
   color: #737372;
 }
+.account-section .card small a {
+  color: #737372;
+}
+
+footer {
+  margin-top: 2.5em;
+  background-color: black;
+  height: 18.75em;
+}
 
 /*# sourceMappingURL=main.css.map */
