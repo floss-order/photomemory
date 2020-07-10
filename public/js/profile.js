@@ -9,3 +9,9 @@ function showAll() {
     accountSection.classList.remove('hidden')
     footer.classList.remove('hidden')
 }
+
+async function sendProfile() {
+    const instagramProfile = profileInput.value
+    const url = '/:instagram-username'
+    fetch(url, { method: 'GET' })
+}
