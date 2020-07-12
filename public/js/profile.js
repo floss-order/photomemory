@@ -7,7 +7,14 @@ const footer = document.querySelector('footer')
 form.addEventListener('submit', async event => {
     event.preventDefault()
     showAll()
-    await sendProfile()
+    
+    try {
+        await sendProfile()
+    }
+    
+    catch (error) {
+        throw error
+    }
 })
 
 function showAll() {
