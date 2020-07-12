@@ -15,5 +15,8 @@ router.post('/', (req, res) => {
     
 })
 
+router.get('/:instagramUserName', (req, res) => {
+    console.log(req.params)
+})
 
 module.exports = router

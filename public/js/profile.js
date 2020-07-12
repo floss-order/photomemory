@@ -17,7 +17,7 @@ function showAll() {
 }
 
 async function sendProfile() {
-    const instagramProfile = profileInput.value
-    const url = '/:instagram-username'
+    const instagramUserName = profileInput.value
+    const url = `/${instagramUserName}`
     fetch(url, { method: 'GET' })
 }
