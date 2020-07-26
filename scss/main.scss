@@ -23,7 +23,6 @@ header {
     height: 10vh;
 
     nav {
-        font-family: 'Nunito', sans-serif;
         ul {
             display: flex;
             list-style: none;
@@ -33,20 +32,32 @@ header {
             margin-left: 5rem;
         }
 
-        a {
-            color: var(--color-nav-link);
+        .link {
             font-weight: 300;
             font-size: 1.5625rem;
             text-decoration: none;
         }
+        
+        .link_sign-in {
+            color: var(--color-tapa);
+        }
+        
+        .link_sign-in:hover {
+            color: var(--color-blue-violet);
+            //transition: 0.2s ease-in-out;
+        }
 
-        a.sign-up {
+        .link_sign-up {
             color: white;
-            background: var(--color-purple);
-            padding: 0.5rem 1.5rem;
-            box-shadow: 0px 0px 10px ;
+            background: var(--color-blue-violet);
+            padding: 0.5em 1.5em;
             border: none;
             border-radius: 0.625rem;
+        }
+        
+        .link_sign-up:hover {
+            box-shadow: 0px 0px 10px var(--color-blue-violet);
+            //transition: 0.3s ease-in-out;
         }
     }
 }
