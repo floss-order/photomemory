@@ -158,9 +158,30 @@ header nav .link_sign-up:hover {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 2.5em;
-  background-color: black;
-  height: 18.75em;
+  border: 2px solid black;
+  background-color: white;
+  min-height: 9.2678405931vh;
+  font-size: 1.25rem;
+}
+footer p {
+  font-weight: 500;
+}
+footer ul li {
+  display: inline;
+}
+footer ul li:not(:last-child) {
+  margin-right: 80px;
+}
+footer ul a {
+  text-decoration: none;
+  color: black;
+}
+footer ul a:focus, footer ul a:hover {
+  color: var(--color-blue-violet);
 }
 
 .hidden {
