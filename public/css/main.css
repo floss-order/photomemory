@@ -1,17 +1,202 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @import "__colors.scss";
- *   |         ^^^^^^^^^^^^^^^
- *   '
- *   scss/main.scss 1:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import \"__colors.scss\";\a   \2502          ^^^^^^^^^^^^^^^\a   \2575 \a   scss/main.scss 1:9  root stylesheet";
+:root {
+  --color-blue-violet: #788BFF;
+  --color-solitude: #F5F6F8;
+  --color-tapa: #737372;
+  --color-gray90: #E5E5E5;
+  --color-gray77: #C4C4C4;
+  --color-red: #F44336;
+  --color-light-red: #F1DEDE;
+  --color-green: #2BA62D;
+  --color-light-green: #DEF1DE;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  padding: 0 5rem;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--color-solitude);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav li {
+  margin-left: 5rem;
+}
+header nav .link {
+  font-weight: 300;
+  font-size: 1.5625rem;
+  text-decoration: none;
+}
+header nav .link_sign-in {
+  color: var(--color-tapa);
+}
+header nav .link_sign-in:hover {
+  color: var(--color-blue-violet);
+}
+header nav .link_sign-up {
+  color: white;
+  background: var(--color-blue-violet);
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 0.625rem;
+}
+header nav .link_sign-up:hover {
+  box-shadow: 0px 0px 10px var(--color-blue-violet);
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  color: white;
+  background-color: var(--color-blue-violet);
+}
+.hero-section h1 {
+  font-size: 3.125rem;
+  font-weight: bold;
+}
+.hero-section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+}
+.hero-section form label {
+  font-weight: 500;
+}
+.hero-section form input {
+  margin-top: 2.5rem;
+  padding: 2.5rem;
+  border-radius: 0.625rem;
+  border: none;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+
+.account-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: var(--color-section-bg);
+}
+.account-section h1 {
+  margin: 3.75rem 0;
+  font-size: 3.57rem;
+  font-weight: bold;
+}
+.account-section .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20vw;
+  padding: 5rem;
+  border-radius: 10px;
+  background: white;
+}
+.account-section .card > *:not(:last-child) {
+  margin-bottom: 40px;
+}
+.account-section .card .card-avatar .card__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: black;
+}
+.account-section .card .card-avatar p {
+  margin-top: 40px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.875rem;
+}
+.account-section .card .card-info {
+  display: flex;
+  text-align: center;
+}
+.account-section .card .card-info div:not(:last-child) {
+  margin-right: 40px;
+}
+.account-section .card .card-info .card-info-heading {
+  color: var(--color-blue-violet);
+  font-weight: bold;
+  font-size: 1.5625rem;
+  margin-bottom: 10px;
+}
+.account-section .card .card-info .card-info-caption {
+  color: var(--color-gray77);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.account-section .card .btn {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5625rem;
+  padding: 1em 2em;
+  background: var(--color-blue-violet);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.account-section .card small {
+  font-size: 1.25rem;
+}
+.account-section .card small a {
+  color: var(--color-tapa);
+  text-decoration: none;
+}
+.account-section .card small a:hover, .account-section .card small a:focus {
+  color: var(--color-blue-violet);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  min-height: 9.2678405931vh;
+  font-size: 1.25rem;
+}
+footer p {
+  font-weight: 500;
+}
+footer ul li {
+  display: inline;
+}
+footer ul li:not(:last-child) {
+  margin-right: 80px;
+}
+footer ul a {
+  text-decoration: none;
+  color: black;
+}
+footer ul a:focus, footer ul a:hover {
+  color: var(--color-blue-violet);
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */
