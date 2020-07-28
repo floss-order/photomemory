@@ -1,4 +1,4 @@
-@import "__colors.scss";
+@import "partials/__colors.scss";
 
 * {
     margin: 0;
@@ -63,7 +63,7 @@ header {
     }
 }
 
-
+@import "partials/_home.scss";
 
 footer {
     display: flex;
