@@ -101,8 +101,8 @@ header nav .link_sign-up:hover {
   background: var(--color-section-bg);
 }
 .account-section h1 {
-  margin: 2.5rem 0;
-  font-size: 3.125rem;
+  margin: 3.75rem 0;
+  font-size: 3.57rem;
   font-weight: bold;
 }
 .account-section .card {
@@ -112,6 +112,9 @@ header nav .link_sign-up:hover {
   min-width: 20vw;
   padding: 5rem;
   border-radius: 10px;
+}
+.account-section .card > *:not(:last-child) {
+  margin-bottom: 40px;
 }
 .account-section .card .card-avatar .card__image {
   width: 250px;
@@ -125,35 +128,44 @@ header nav .link_sign-up:hover {
   font-weight: 300;
   font-size: 1.875rem;
 }
-.account-section .card .card-selection {
+.account-section .card .card-info {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  margin: 40px auto;
   text-align: center;
 }
-.account-section .card .card-selection h4 {
-  font-weight: 500;
-  font-size: 1.875rem;
+.account-section .card .card-info div:not(:last-child) {
+  margin-right: 40px;
 }
-.account-section .card .card-selection .card-selection-icon {
-  margin-top: 40px;
-  padding: 1em 1em;
-  border-radius: 0.625rem;
-  transition: 0.5s ease-in-out;
-}
-.account-section .card .card-selection .card-selection-icon p {
+.account-section .card .card-info .card-info-heading {
+  color: var(--color-blue-violet);
+  font-weight: bold;
   font-size: 1.5625rem;
+  margin-bottom: 10px;
 }
-.account-section .card .card-selection .card-selection-icon:hover {
-  background-color: darkgray;
+.account-section .card .card-info .card-info-caption {
+  color: var(--color-gray77);
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.account-section .card .btn {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5625rem;
+  padding: 1em 2em;
+  background: var(--color-blue-violet);
+  border-radius: 10px;
+  text-decoration: none;
 }
 .account-section .card small {
   font-size: 1.25rem;
-  color: var(--color-card-link);
 }
 .account-section .card small a {
-  color: var(--color-card-link);
+  color: var(--color-tapa);
+  text-decoration: none;
+}
+.account-section .card small a:hover, .account-section .card small a:focus {
+  color: var(--color-blue-violet);
 }
 
 footer {

@@ -109,8 +109,8 @@ header {
     background: var(--color-section-bg);
 
     h1 {
-        margin: 2.5rem 0;
-        font-size: 3.125rem;
+        margin: 3.75rem 0;
+        font-size: 3.57rem;
         font-weight: bold;
     }
 
@@ -123,6 +123,10 @@ header {
         min-width: 20vw;
         padding: 5rem;
         border-radius: 10px;
+
+        > *:not(:last-child) {
+            margin-bottom: 40px;
+        }
 
         .card-avatar {
             .card__image {
@@ -140,42 +144,52 @@ header {
             }
         }   
 
-        .card-selection {
+        .card-info {
             display: flex;
-            flex-direction: column;
-            align-self: center;
-            margin: 40px auto;
             text-align: center;
 
-            h4 {
-                font-weight: 500;
-                font-size: 1.875rem;
-            }   
+                div:not(:last-child) {
+                    margin-right: 40px;
 
-            .card-selection-icon {
-                margin-top: 40px;
-                padding: 1em 1em;
-                border-radius: 0.625rem;
-                transition: 0.5s ease-in-out;
-                
-                p {
-                    font-size: 1.5625rem;
                 }
-            }
+                
+                .card-info-heading {
+                    color: var(--color-blue-violet);
+                    font-weight: bold;
+                    font-size: 1.5625rem;
+                    margin-bottom: 10px;
+                }
 
-            .card-selection-icon:hover {
-                background-color: darkgray;
-            }
+                .card-info-caption {
+                    color: var(--color-gray77);
+                    font-weight: 600;
+                    font-size: 1.25rem;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;                    
+                }
 
+        }
 
+        .btn {
+            color: white;
+            font-weight: 500;
+            font-size: 1.5625rem;
+            padding: 1em 2em;
+            background: var(--color-blue-violet);
+            border-radius: 10px;
+            text-decoration: none;
         }
 
         small {
             font-size: 1.25rem;
-            color: var(--color-card-link);
 
             a {
-                color: var(--color-card-link);
+                color: var(--color-tapa);
+                text-decoration: none;
+            }
+
+            a:hover, a:focus {
+                color: var(--color-blue-violet);
             }
         }
     }
