@@ -11,10 +11,6 @@ router.get('/', async (req, res) => {
     res.render('index.ejs', { page })
 })
 
-router.post('/', (req, res) => {
-    
-})
-
 router.get('/:instagramUserName', (req, res) => {
     console.log(req.params)
 })
