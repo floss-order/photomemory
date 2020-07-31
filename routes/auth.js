@@ -8,4 +8,10 @@ router.get('/sign-up', (req, res) => {
     res.render('auth/register.ejs', { page })
 })
 
+//Sign in route
+router.get('/sign-in', (req, res) => {
+    const page = { title: 'Sign in' }
+    res.render('auth/sign-in.ejs', { page })
+})
+
 module.exports = router
