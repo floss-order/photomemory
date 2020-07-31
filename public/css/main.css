@@ -100,6 +100,7 @@ header nav .link_sign-up:hover {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  margin-bottom: 80px;
   background: var(--color-section-bg);
 }
 .account-section h1 {
