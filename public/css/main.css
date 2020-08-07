@@ -17,6 +17,12 @@
 }
 
 .wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrap > * {
   padding: 0 5rem;
 }
 
@@ -30,6 +36,7 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 10vh;
+  width: 100%;
   background: white;
 }
 header nav ul {
@@ -172,24 +179,24 @@ header nav .link_sign-up:hover {
   color: var(--color-blue-violet);
 }
 
-.card-container .card {
+.card {
   padding: 5rem;
   margin: 60px auto;
   max-width: 53vw;
   background: white;
   border-radius: 10px;
 }
-.card-container .card h1 {
+.card h1 {
   text-align: center;
   font-weight: bold;
 }
-.card-container .card form {
+.card form {
   width: 100%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
-.card-container .card form .input-container {
+.card form .input-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -197,16 +204,16 @@ header nav .link_sign-up:hover {
   width: 100%;
   margin: 5em 0;
 }
-.card-container .card form .input-container .row {
+.card form .input-container .row {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.card-container .card form .input-container .row label {
+.card form .input-container .row label {
   font-weight: 500;
   font-size: 1.25rem;
 }
-.card-container .card form .input-container .row input {
+.card form .input-container .row input {
   margin-top: 20px;
   border: none;
   border-radius: 10px;
@@ -215,10 +222,10 @@ header nav .link_sign-up:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
 }
-.card-container .card form .input-container .row input::placeholder {
+.card form .input-container .row input::placeholder {
   color: var(--color-tapa);
 }
-.card-container .card form button {
+.card form button {
   padding: 0.5em 1.5em;
   border: none;
   border-radius: 10px;
@@ -232,6 +239,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   background-color: white;
   min-height: 9.2678405931vh;
   font-size: 1.25rem;
