@@ -175,7 +175,7 @@ header nav .link_sign-up:hover {
 .card-container .card {
   padding: 5rem;
   margin: 60px auto;
-  width: 53vw;
+  max-width: 53vw;
   background: white;
   border-radius: 10px;
 }
