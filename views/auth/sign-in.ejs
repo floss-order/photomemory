@@ -1,1 +1,17 @@
-<h1>Hello</h1>
+<div class="card-container">
+    <div class="card">
+        <h1>Sign in</h1>
+        <form action="/auth/sign-in" method="POST">
+            <div class="input-container">
+                <div class="row">
+                    <label for="">Email</label>
+                    <input type="email" name="email" placeholder="john_doe@example.com">
+                </div>
+                <div class="row">
+                    <label for="">Password</label>
+                    <input type="password" name="password" placeholder="Type your password">
+                </div>
+            </div>
+            <button type="submit">sign in</button>
+        </form>
+</div>
