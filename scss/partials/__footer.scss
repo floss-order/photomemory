@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //margin-top: 2.5em;
+    background-color: white;
+    min-height: 9.267840593141798vh;
+    font-size: 1.25rem;
+    
+        p {
+            font-weight: 500;
+        }
+        
+        ul {
+            li {
+                display: inline;
+            }
+            
+            li:not(:last-child) {
+                margin-right: 80px;
+            }
+            
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            
+            a:focus, a:hover {
+                color: var(--color-blue-violet);
+            }
+
+        }
+}
