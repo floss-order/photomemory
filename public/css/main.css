@@ -228,29 +228,40 @@ header nav .link_sign-up:hover {
   background: var(--color-blue-violet);
 }
 
-footer {
+header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: white;
-  min-height: 9.2678405931vh;
-  font-size: 1.25rem;
+  justify-content: space-between;
+  height: 10vh;
+  background: white;
 }
-footer p {
-  font-weight: 500;
+header nav ul {
+  display: flex;
+  list-style: none;
 }
-footer ul li {
-  display: inline;
+header nav li {
+  margin-left: 5rem;
 }
-footer ul li:not(:last-child) {
-  margin-right: 80px;
-}
-footer ul a {
+header nav .link {
+  font-weight: 300;
+  font-size: 1.5625rem;
   text-decoration: none;
-  color: black;
 }
-footer ul a:focus, footer ul a:hover {
+header nav .link_sign-in {
+  color: var(--color-tapa);
+}
+header nav .link_sign-in:hover {
   color: var(--color-blue-violet);
+}
+header nav .link_sign-up {
+  color: white;
+  background: var(--color-blue-violet);
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 0.625rem;
+}
+header nav .link_sign-up:hover {
+  box-shadow: 0px 0px 10px var(--color-blue-violet);
 }
 
 .hidden {
