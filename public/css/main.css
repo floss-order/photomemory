@@ -240,6 +240,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: absolute !important;
+  bottom: 0 !important;
   background-color: white;
   min-height: 9.2678405931vh;
   font-size: 1.25rem;
