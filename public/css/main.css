@@ -102,10 +102,6 @@ header nav li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 20vw;
-  padding: 5rem;
-  border-radius: 10px;
-  background: white;
 }
 .account-section .card > *:not(:last-child) {
   margin-bottom: 40px;
@@ -142,24 +138,8 @@ header nav li {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.account-section .card .btn {
-  color: white;
-  font-weight: 500;
-  font-size: 1.5625rem;
-  padding: 1em 2em;
-  background: var(--color-blue-violet);
-  border-radius: 10px;
-  text-decoration: none;
-}
 .account-section .card small {
   font-size: 1.25rem;
-}
-.account-section .card small a {
-  color: var(--color-tapa);
-  text-decoration: none;
-}
-.account-section .card small a:hover, .account-section .card small a:focus {
-  color: var(--color-blue-violet);
 }
 
 .card-container .card {

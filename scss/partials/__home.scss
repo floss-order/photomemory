@@ -55,12 +55,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: space-evenly;
-        // min-height: 80%;
-        min-width: 20vw;
-        padding: 5rem;
-        border-radius: 10px;
-        background: white;
+
 
         > *:not(:last-child) {
             margin-bottom: 40px;
@@ -108,27 +103,8 @@
 
         }
 
-        .btn {
-            color: white;
-            font-weight: 500;
-            font-size: 1.5625rem;
-            padding: 1em 2em;
-            background: var(--color-blue-violet);
-            border-radius: 10px;
-            text-decoration: none;
-        }
-
         small {
             font-size: 1.25rem;
-
-            a {
-                color: var(--color-tapa);
-                text-decoration: none;
-            }
-
-            a:hover, a:focus {
-                color: var(--color-blue-violet);
-            }
         }
     }
 }
