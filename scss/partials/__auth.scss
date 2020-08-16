@@ -13,36 +13,44 @@
         
         .input-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
             grid-gap: 40px;
             gap: 40px;
             width: 100%;
             margin: 5em 0;
-
-            .row {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-
-                label {
-                    font-weight: 500;
-                    font-size: 1.25rem;
-                }
-
-                input {
-                    margin-top: 20px;
-                    border: none;
-                    border-radius: 10px;
-                    background: var(--color-gray90);
-                    padding: 1em 1.25em;
-                    font-family: 'Montserrat', sans-serif;
-                    font-size: 1.25rem;
-                }
-                
-                input::placeholder {
-                    color: var(--color-tapa);
-                }
-            }
         }
+
+        .input-container-horizontal {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .input-container-vertical {
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .row {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 1.25rem;
+        }
+
+        input {
+            margin-top: 20px;
+            padding: 1em 1.25em;
+            border: none;
+            border-radius: 10px;
+            background: var(--color-gray90);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+        }
+        
+        input::placeholder {
+            color: var(--color-tapa);
+        }
+        
     }
 }

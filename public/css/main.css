@@ -154,31 +154,36 @@ header nav li {
 }
 .card form .input-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
   gap: 40px;
   width: 100%;
   margin: 5em 0;
 }
-.card form .input-container .row {
+.card form .input-container-horizontal {
+  grid-template-columns: repeat(2, 1fr);
+}
+.card form .input-container-vertical {
+  grid-template-rows: repeat(2, 1fr);
+}
+.card form .row {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.card form .input-container .row label {
+.card form label {
   font-weight: 500;
   font-size: 1.25rem;
 }
-.card form .input-container .row input {
+.card form input {
   margin-top: 20px;
+  padding: 1em 1.25em;
   border: none;
   border-radius: 10px;
   background: var(--color-gray90);
-  padding: 1em 1.25em;
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
 }
-.card form .input-container .row input::placeholder {
+.card form input::placeholder {
   color: var(--color-tapa);
 }
 
