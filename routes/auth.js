@@ -5,7 +5,7 @@ const router = express.Router()
 //Sign up route
 router.get('/sign-up', (req, res) => {
     const page = { title: 'Sign up', layout: false }
-    res.render('auth/register.ejs', { page })
+    res.render('auth/sign-up.ejs', { page })
 })
 
 //Sign in route
