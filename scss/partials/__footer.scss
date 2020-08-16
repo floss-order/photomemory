@@ -6,29 +6,25 @@ footer {
     //margin-top: 2.5em;
     background-color: white;
     min-height: 9.267840593141798vh;
-    font-size: 1.25rem;
-    
-        p {
-            font-weight: 500;
+    font-weight: 500;
+    font-size: 1.25rem;    
+            
+    ul {
+        li {
+            display: inline;
         }
         
-        ul {
-            li {
-                display: inline;
-            }
-            
-            li:not(:last-child) {
-                margin-right: 80px;
-            }
-            
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            
-            a:focus, a:hover {
-                color: var(--color-blue-violet);
-            }
-
+        li:not(:last-child) {
+            margin-right: 5rem;
         }
+        
+        // a {
+        //     text-decoration: none;
+        //     color: black;
+        // }
+        
+        // a:focus, a:hover {
+        //     color: var(--color-blue-violet);
+        // }
+    }
 }
