@@ -142,24 +142,17 @@ header nav li {
   font-size: 1.25rem;
 }
 
-.card-container .card {
-  padding: 5rem;
-  margin: 60px auto;
-  max-width: 53vw;
-  background: white;
-  border-radius: 10px;
-}
-.card-container .card h1 {
+.card h1 {
   text-align: center;
   font-weight: bold;
 }
-.card-container .card form {
+.card form {
   width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
-.card-container .card form .input-container {
+.card form .input-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -167,16 +160,16 @@ header nav li {
   width: 100%;
   margin: 5em 0;
 }
-.card-container .card form .input-container .row {
+.card form .input-container .row {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.card-container .card form .input-container .row label {
+.card form .input-container .row label {
   font-weight: 500;
   font-size: 1.25rem;
 }
-.card-container .card form .input-container .row input {
+.card form .input-container .row input {
   margin-top: 20px;
   border: none;
   border-radius: 10px;
@@ -185,17 +178,8 @@ header nav li {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
 }
-.card-container .card form .input-container .row input::placeholder {
+.card form .input-container .row input::placeholder {
   color: var(--color-tapa);
-}
-.card-container .card form button {
-  padding: 0.5em 1.5em;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.5625rem;
-  font-weight: 300;
-  color: white;
-  background: var(--color-blue-violet);
 }
 
 footer {
@@ -218,6 +202,7 @@ footer ul li:not(:last-child) {
 .btn {
   color: white;
   background: var(--color-blue-violet);
+  border: none;
   border-radius: 10px;
   text-decoration: none;
 }
@@ -232,6 +217,10 @@ footer ul li:not(:last-child) {
   padding: 1em 2em;
   font-size: 1.5625rem;
   font-weight: 500;
+}
+
+.card-container {
+  margin: 60px auto;
 }
 
 .card {
