@@ -46,27 +46,6 @@ header nav ul {
 header nav li {
   margin-left: 5rem;
 }
-header nav .link {
-  font-weight: 300;
-  font-size: 1.5625rem;
-  text-decoration: none;
-}
-header nav .link_sign-in {
-  color: var(--color-tapa);
-}
-header nav .link_sign-in:hover {
-  color: var(--color-blue-violet);
-}
-header nav .link_sign-up {
-  color: white;
-  background: var(--color-blue-violet);
-  padding: 0.5em 1.5em;
-  border: none;
-  border-radius: 0.625rem;
-}
-header nav .link_sign-up:hover {
-  box-shadow: 0px 0px 10px var(--color-blue-violet);
-}
 
 .hero-section {
   display: flex;
@@ -179,24 +158,24 @@ header nav .link_sign-up:hover {
   color: var(--color-blue-violet);
 }
 
-.card {
+.card-container .card {
   padding: 5rem;
   margin: 60px auto;
   max-width: 53vw;
   background: white;
   border-radius: 10px;
 }
-.card h1 {
+.card-container .card h1 {
   text-align: center;
   font-weight: bold;
 }
-.card form {
+.card-container .card form {
   width: 100%;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
 }
-.card form .input-container {
+.card-container .card form .input-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
@@ -204,16 +183,16 @@ header nav .link_sign-up:hover {
   width: 100%;
   margin: 5em 0;
 }
-.card form .input-container .row {
+.card-container .card form .input-container .row {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.card form .input-container .row label {
+.card-container .card form .input-container .row label {
   font-weight: 500;
   font-size: 1.25rem;
 }
-.card form .input-container .row input {
+.card-container .card form .input-container .row input {
   margin-top: 20px;
   border: none;
   border-radius: 10px;
@@ -222,10 +201,10 @@ header nav .link_sign-up:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 1.25rem;
 }
-.card form .input-container .row input::placeholder {
+.card-container .card form .input-container .row input::placeholder {
   color: var(--color-tapa);
 }
-.card form button {
+.card-container .card form button {
   padding: 0.5em 1.5em;
   border: none;
   border-radius: 10px;
@@ -259,6 +238,57 @@ footer ul a {
 }
 footer ul a:focus, footer ul a:hover {
   color: var(--color-blue-violet);
+}
+
+.btn {
+  color: white;
+  background: var(--color-blue-violet);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn-sm {
+  padding: 0.5em 1.5em;
+  font-size: 1.5625rem;
+  font-weight: 300;
+}
+
+.btn-lg {
+  padding: 1em 2em;
+  font-size: 1.5625rem;
+  font-weight: 500;
+}
+
+.card {
+  padding: 5rem;
+  border-radius: 10px;
+  background: white;
+}
+
+.card-md {
+  min-width: 20vw;
+}
+
+.card-lg {
+  min-width: 53vw;
+}
+
+.link, .link:visited {
+  font-weight: 300;
+  font-size: 1.5625rem;
+  text-decoration: none;
+}
+
+.link:active, .link:hover {
+  color: var(--color-blue-violet);
+}
+
+.link-gray {
+  color: var(--color-tapa);
+}
+
+.link-black {
+  color: black;
 }
 
 .hidden {

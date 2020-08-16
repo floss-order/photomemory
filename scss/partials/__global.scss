@@ -1,0 +1,50 @@
+.btn {
+    color: white;
+    background: var(--color-blue-violet);
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn-sm {
+    padding: 0.5em 1.5em;
+    font-size: 1.5625rem;
+    font-weight: 300;
+}
+
+.btn-lg {
+    padding: 1em 2em;
+    font-size: 1.5625rem;
+    font-weight: 500;
+}
+
+.card {
+    padding: 5rem;
+    border-radius: 10px;
+    background: white;
+}
+
+.card-md {
+    min-width: 20vw;
+}
+
+.card-lg {
+    min-width: 53vw;
+}
+
+.link, .link:visited {
+    font-weight: 300;
+    font-size: 1.5625rem;
+    text-decoration: none;
+}
+
+.link:active, .link:hover {
+    color: var(--color-blue-violet);
+}
+
+.link-gray {
+    color: var(--color-tapa);
+}
+
+.link-black {
+    color: black;
+}
