@@ -4,7 +4,10 @@ const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-require('dotenv').config()
+
+if(process.env.NODE_ENV === 'development') {
+    require('dotenv').config()
+}
 
 
 //Server config
