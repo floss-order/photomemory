@@ -1,6 +1,6 @@
 aside {
     font-size: 1.25rem;
-    
+
     ul {
         margin-top: 1.25rem;
     }
@@ -9,4 +9,106 @@ aside {
         list-style-type: none;
         padding: 0.625rem 2.5rem;
     }
+}
+
+table {
+    // table-layout: fixed;
+    margin-top: 60px;
+    border-collapse: collapse;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: left;
+
+    thead {
+        border-radius: 50%;
+        background: var(--color-gray90);
+    }
+    
+    th {
+        font-weight: 500;
+        color: var(--color-tapa);
+    }
+
+    th, td {
+        padding: 1rem;
+    }
+
+    tbody {
+
+        tr:nth-child(even) {
+            background: var(--color-solitude);
+        }
+
+        tr:last-of-type {
+            border-bottom: 4px solid var(--color-gray90);
+        }
+    }  
+}
+
+.badge-container {
+    display: flex;
+    padding: 0.7rem;
+    border-radius: 100px;
+}
+
+.badge-container-fullfilled {
+    background: var(--color-light-green);
+}
+
+.badge-container-cancelled {
+    background: var(--color-light-red);
+}
+
+.badge-container-confirmed {
+    background: var(--color-light-blue);
+}
+
+.badge-container-shipped {
+    background: var(--color-light-yellow);
+}
+
+.badge {
+    content: ' ';
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+} 
+
+.badge-fullfilled {
+    background: var(--color-green);
+}
+
+.badge-cancelled {
+    background: var(--color-red);
+}
+
+.badge-confirmed {
+    background: var(--color-blue);
+}
+
+.badge-shipped {
+    background: var(--color-yellow);
+}
+
+.badge-label {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.badge-label-fullfilled {
+    color: var(--color-green);
+}
+
+.badge-label-cancelled {
+    color: var(--color-red);
+}
+
+.badge-label-confirmed {
+    color: var(--color-blue);
+}
+
+.badge-label-shipped {
+    color: var(--color-yellow);
 }
