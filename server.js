@@ -21,8 +21,10 @@ app.use(bodyParser.urlencoded( { limit: '10mb', extended: false } ))
 //Routes list
 const indexRouter = require('./routes/index.js')
 const authRouter = require('./routes/auth.js')
+const userRouter = require('./routes/user.js')
 app.use('/', indexRouter)
 app.use('/auth', authRouter)
+app.use('/user', userRouter)
 
 //Connect to the database and run the server
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true } )
