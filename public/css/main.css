@@ -187,6 +187,17 @@ header nav li {
   color: var(--color-tapa);
 }
 
+aside {
+  font-size: 1.25rem;
+}
+aside ul {
+  margin-top: 1.25rem;
+}
+aside li {
+  list-style-type: none;
+  padding: 0.625rem 2.5rem;
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -228,10 +239,23 @@ footer ul li:not(:last-child) {
   margin: 60px auto;
 }
 
+.card-container-h {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
 .card {
   padding: 5rem;
   border-radius: 10px;
   background: white;
+}
+
+.card-sm {
+  padding: 0;
+  width: 15.625vw;
+  height: 37vh;
 }
 
 .card-md {
@@ -240,6 +264,10 @@ footer ul li:not(:last-child) {
 
 .card-lg {
   min-width: 53vw;
+}
+
+.card-xl {
+  width: 100%;
 }
 
 .link, .link:visited {
@@ -256,6 +284,10 @@ footer ul li:not(:last-child) {
 
 .link-black {
   color: black;
+}
+
+.link-active {
+  background: var(--color-gray90);
 }
 
 .hidden {
