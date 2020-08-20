@@ -22,10 +22,23 @@
     margin: 60px auto;
 }
 
+.card-container-h {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
 .card {
     padding: 5rem;
     border-radius: 10px;
     background: white;
+}
+
+.card-sm {
+    padding: 0;
+    width: 15.625vw;
+    height: 37vh;
 }
 
 .card-md {
@@ -34,6 +47,10 @@
 
 .card-lg {
     min-width: 53vw;
+}
+
+.card-xl {
+    width: 100%;
 }
 
 .link, .link:visited {
@@ -50,4 +67,8 @@
 
 .link-black {
     color: black;
+}
+
+.link-active {
+    background: var(--color-gray90);
 }
