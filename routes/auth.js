@@ -29,4 +29,17 @@ router.get('/sign-in', (req, res) => {
     res.render('auth/sign-in.ejs', { page })
 })
 
+router.post('/sign-in', async (req, res) => {
+    const { email, password } = req.body
+
+    try {
+        const user = await User.signIn(email, password)
+        res.send('<h1>Поздравляю, вы успешно авторизовались</h1>')
+    }
+
+    catch(error) {
+        res.status(400).send(`Эмммм, что-то не так - ${error}`)
+    }
+ })
+
 module.exports = router
