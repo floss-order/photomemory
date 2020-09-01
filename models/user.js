@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
     },
 
     phone: {
-        type: Number,
+        type: String,
         required: [true, 'Please enter your phone number'],
         validate: [isMobilePhone, 'Please enter a valid phone number']
     },
@@ -42,7 +42,7 @@ const userSchema = new mongoose.Schema({
 })
 
 //Password hashing
-userSchema.pre('save', async function() {
+userSchema.pre('save', async function(next) {
     const salt = await bcrypt.genSalt()
     this.password = await bcrypt.hash(this.password, salt)
     next()
