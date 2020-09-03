@@ -34,7 +34,12 @@ router.post('/sign-in', async (req, res) => {
 
     try {
         const user = await User.signIn(email, password)
-        res.send('<h1>Поздравляю, вы успешно авторизовались</h1>')
+        req.session.user = user
+        req.session.isSignedIn = true
+        req.session.save(err => {
+            if(err) throw err
+            res.redirect('/user/profile-info')
+        })
     }
 
     catch(error) {
