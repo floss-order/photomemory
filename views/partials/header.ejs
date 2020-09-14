@@ -4,8 +4,17 @@
     </a>    
     <nav>
         <ul>
-            <li><a href="/auth/sign-in" class="link link-gray">sign in</a></li>
-            <li><a href="/auth/sign-up" class="btn btn-sm">sign up</a></li>            
+            <% if (!isSignedIn) { %>
+                <li><a href="/auth/sign-in" class="link link-gray">sign in</a></li>
+                <li><a href="/auth/sign-up" class="btn btn-sm">sign up</a></li>             
+            <% } else { %>
+                <li><a href="/user/profile-info"> <%=user["fullName"] %></a></li>
+                <li>
+                    <form action="/auth/sign-out" method="post">
+                        <input type="submit" value="Sign out">
+                    </form>
+                </li>
+            <% } %>
         </ul>
     </nav>
 </header>

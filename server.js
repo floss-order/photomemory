@@ -28,7 +28,7 @@ app.use(session({
     cookie: {
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
-        maxAge: 500 //1000 * 60 * 60 * 5, //5 hours   
+        maxAge: 1000 * 60 * 60 * 5, //5 hours   
     },
     store: new MongoStore({
         collection: 'sessions',
