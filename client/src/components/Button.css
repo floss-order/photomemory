@@ -1,0 +1,34 @@
+@import './colors.css';
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.btn-sm {
+    padding: 0.5em 1.5em;
+    font-size: 1.5625rem;
+    font-weight: 300;
+}
+
+.btn-lg {
+    padding: 1em 2em;
+    font-size: 1.5625rem;
+    font-weight: 500;
+}
+
+.btn-violet {
+    color: white;
+    background: var(--color-blue-violet);
+}
+
+.btn-violet-inverted {
+    color: var(--color-blue-violet);
+    background: var(--color-blue-violet-light);
+}
+
+.btn-red {
+    color: var(--color-red);
+    background: var(--color-light-red);
+}
