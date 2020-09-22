@@ -1,0 +1,17 @@
+:root {
+    /* colooooors */
+    --color-blue-violet: #788BFF;
+    --color-blue-violet-light: rgba(120, 139, 255, 0.27);
+    --color-solitude: #F5F6F8;
+    --color-tapa: #737372;
+    --color-gray90: #E5E5E5;
+    --color-gray77: #C4C4C4;
+    --color-red: #F44336;
+    --color-light-red: #F1DEDE;
+    --color-green: #2BA62D;
+    --color-light-green: #DEF1DE;
+    --color-blue: #01B2FF;
+    --color-light-blue: #D2F4FF;
+    --color-yellow:#FFB302;
+    --color-light-yellow: #FAECD3;
+}
