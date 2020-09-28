@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    background: white;
+    /* min-height: 9.267840593141798vh; */
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+li {
+    display: inline;
+}
+
+li:not(:last-child) {
+    margin-right: 5rem;
+}

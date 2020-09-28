@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from './components/Button'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <Button className="btn-sm btn-violet-inverted">preview</Button>
+    <Footer></Footer>
   )
 }
 
