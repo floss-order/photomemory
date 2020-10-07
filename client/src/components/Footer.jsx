@@ -3,8 +3,10 @@ import propTypes from 'prop-types'
 import classNames from 'classnames'
 
 import './Footer.css'
+import List from './List'
+import ListItem from './ListItem'
 
-function Footer({ children, className }) {
+function Footer({ className }) {
     const classes = classNames(
         'footer',
         className
@@ -13,34 +15,34 @@ function Footer({ children, className }) {
         <footer>
             <p>© 2020 PhotoMemory. All rights reserved</p>
             <nav>
-                <ul>
-                    <li>
-                        <a>Contact</a>
-                    </li>
+                <List>
+                    <ListItem>
+                        Contact
+                    </ListItem>
+
+                    <ListItem>
+                        FAQ
+                    </ListItem>
+
+                    <ListItem>
+                        Privacy policy
+                    </ListItem>
                     
-                    <li>
-                        <a>FAQ</a>
-                    </li>
-                    
-                    <li>
-                        <a>Privacy policy</a>
-                    </li>
-                    
-                    <li>
-                        <a>Terms of service</a>
-                    </li>
-                </ul>
+                    <ListItem>
+                        Terms of service
+                    </ListItem>
+                </List>
             </nav>
         </footer>
     )
 }
 
 Footer.propTypes = {
-    children: propTypes.node
+    className: propTypes.string
 }
 
 Footer.defaultProps = {
-    children: 'I am a footer'
+    className: ''
 }
 
 export default Footer
