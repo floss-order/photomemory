@@ -9,10 +9,10 @@ footer {
     font-size: 1.25rem;
 }
 
-li {
+/* li {
     display: inline;
 }
 
 li:not(:last-child) {
     margin-right: 5rem;
-}
+} */
