@@ -1,14 +1,15 @@
-.search_form {
+.search-form {
     display: flex;
     flex-direction: column;
 }
 
-.search_form__label {
+.search-form_label {
     text-align: center;
     font-weight: 500;
+    font-size: 1.875rem;
 }
 
-.search_form__bar {
+.search-form_bar {
     border-radius: 10px;
     margin-top: 2.5rem;
     padding: 2.5rem;
