@@ -1,0 +1,9 @@
+.card {
+    padding: 5rem;
+    border-radius: 10px;
+    background: white;
+}
+
+.card__md {
+    min-width: 30%;
+}
