@@ -1,0 +1,61 @@
+@import './colors.css';
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container > :not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.card-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card-avatar_image {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+}
+
+.card-avatar_caption, 
+.card-info_caption, 
+.card-info_heading {
+    text-align: center;
+}
+
+.card-avatar_caption {
+    margin-top: 2.5rem;
+    font-weight: 300;
+    font-size: 1.875rem;
+}
+
+.card-info_heading {
+    font-weight: 700;
+    font-size: 1.5625rem;
+    color: var(--color-blue-violet);
+}
+
+.card-info_caption {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-gray77);
+}
+
+.card_link {
+    font-size: 1.25rem;
+    color: var(--color-tapa);
+    text-decoration: none;
+}
+
+.card_link:hover {
+    color: var(--color-blue-violet);
+}
