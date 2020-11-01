@@ -1,22 +1,37 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 
 import './Home.css'
 import Searchbar from '../components/Searchbar'
 import Input from '../components/Input'
 import UsernameCard from '../components/UsernameCard'
 
+async function getAccountInfo(account) {
+    let info = await fetch(`http://localhost:5000/${account}`)
+    info = await info.json()
+    return info
+}
+
 function Home() {
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault()
-        toggle()
+
+        const info = await getAccountInfo(value)
+        setAccount(info)
+
+        setIsSubmit(true)
     }
     
-    const [account, setAccount] = useState('')
+    const [value, setValue] = useState('')
     const [isSubmit, setIsSubmit] = useState(false)
-
-    const toggle = () => {
-        setIsSubmit(isSubmit => !isSubmit)
-    }
+    const [account, setAccount] = useState({
+        username: '',
+        profile_pic_url: '',
+        posts: '',
+        followers: '',
+        following: ''
+    })
+    const sectionRef = useRef()
+    
 
     return (
         <>
@@ -27,14 +42,20 @@ function Home() {
                 </h1>
                 {/* <Searchbar/> */}
                 <form onSubmit={handleSubmit}>
-                    <Input type="text" value={account} onChange={e => {setAccount(e.target.value)} } />
+                    <Input type="text" value={value} onChange={e => {setValue(e.target.value)} } />
                 </form>
             </section>
 
             {isSubmit &&
-                <section className="account section section--align-center">
+                <section className="account section section--align-center" ref={sectionRef}>
                     <h1 className="section_heading">Account has been found!</h1>
-                    <UsernameCard username="someone" posts="100" followers="200k" following="341k"/>
+                    <UsernameCard 
+                        username={account.username} 
+                        profile_pic_url={account.profile_pic_url} 
+                        posts={account.posts} 
+                        followers={account.followers}
+                        following={account.following}
+                    />
                 </section>
             }
         </>
