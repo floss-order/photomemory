@@ -1,11 +1,12 @@
 @import '../components/colors.css';
 
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     color: white;
     background: var(--color-blue-violet);
 }
 
 .account {
     margin-bottom: 3.7rem;
+    scroll-margin-top: 5rem;      
 }

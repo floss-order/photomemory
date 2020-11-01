@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 
 import './Home.css'
-import Searchbar from '../components/Searchbar'
 import Input from '../components/Input'
 import UsernameCard from '../components/UsernameCard'
 
@@ -19,6 +18,7 @@ function Home() {
         setAccount(info)
 
         setIsSubmit(true)
+        sectionRef.current.scrollIntoView({ behavior: 'smooth' })
     }
     
     const [value, setValue] = useState('')
@@ -40,7 +40,6 @@ function Home() {
                     Turn the brightest moments of your life from the Instagram 
                     into photobook with PhotoMemory!
                 </h1>
-                {/* <Searchbar/> */}
                 <form onSubmit={handleSubmit}>
                     <Input type="text" value={value} onChange={e => {setValue(e.target.value)} } />
                 </form>
