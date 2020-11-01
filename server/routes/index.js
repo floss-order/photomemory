@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
 const instaparse = require('../parser/instagram/instaparse.js')
+const instaTouch = require('instatouch')
 
 
 //Index page
@@ -11,8 +12,22 @@ router.get('/', async (req, res) => {
     res.render('index.ejs', { page })
 })
 
-router.get('/:instagramUserName', (req, res) => {
-    console.log(req.params)
+router.get('/:instagramUserName', async (req, res) => {    
+    try {
+        const userMeta = await instaTouch.getUserMeta(req.params.instagramUserName)
+
+        account = {
+            username: userMeta.graphql.user.username,
+            profile_pic_url: userMeta.graphql.user.profile_pic_url_hd,
+            posts: userMeta.graphql.user.edge_owner_to_timeline_media.count,
+            followers: userMeta.graphql.user.edge_followed_by.count,
+            following: userMeta.graphql.user.edge_follow.count
+        }
+        res.json(account)
+
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 module.exports = router
