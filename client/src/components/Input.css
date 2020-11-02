@@ -6,13 +6,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.input::placeholder, 
+.input::-moz-placeholder,
+.input::-webkit-input-placeholder {
+    color: black;
+}
+
 .input:focus {
     outline: none;
 }
 
 .input_search-form {
+    position: relative;
     margin-top: 2.5rem;
-    padding: 2.5rem;
+    padding: 2.5rem 5rem;
     width: 100%;
     font-size: 1.875rem;
 }

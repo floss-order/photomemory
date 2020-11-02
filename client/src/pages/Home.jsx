@@ -40,8 +40,9 @@ function Home() {
                     Turn the brightest moments of your life from the Instagram 
                     into photobook with PhotoMemory!
                 </h1>
-                <form onSubmit={handleSubmit}>
-                    <Input type="text" value={value} onChange={e => {setValue(e.target.value)} } />
+                <form className="search-form" onSubmit={handleSubmit}>
+                    <Input className="input_search-form" placeholder="username" type="text" value={value} onChange={e => {setValue(e.target.value)} } />
+                    <span className="search-form__input-badge">@</span>
                 </form>
             </section>
 
