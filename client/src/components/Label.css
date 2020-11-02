@@ -1,0 +1,13 @@
+.label {
+    font-weight: 500;
+}
+
+.label_search-form {
+    display: block;
+    text-align: center;
+    font-size: 1.875rem;
+}
+
+.label_form {
+    font-size: 1.25rem;
+}
