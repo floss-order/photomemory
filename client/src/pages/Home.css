@@ -10,3 +10,16 @@
     margin-bottom: 3.7rem;
     scroll-margin-top: 5rem;      
 }
+
+.search-form {
+    align-self: stretch;
+}
+
+.search-form__input-badge {
+    position: relative;
+    left: 2.8125rem;
+    bottom: 5rem;
+    font-size: 1.875rem;
+    font-weight: 300;
+    color: black;
+}
