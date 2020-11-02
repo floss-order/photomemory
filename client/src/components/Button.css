@@ -5,6 +5,7 @@
     border-radius: 10px;
     text-decoration: none;
     cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-sm {
