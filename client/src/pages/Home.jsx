@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 
 import './Home.css'
+import Label from '../components/Label'
 import Input from '../components/Input'
 import UsernameCard from '../components/UsernameCard'
 
@@ -41,7 +42,19 @@ function Home() {
                     into photobook with PhotoMemory!
                 </h1>
                 <form className="search-form" onSubmit={handleSubmit}>
-                    <Input className="input_search-form" placeholder="username" type="text" value={value} onChange={e => {setValue(e.target.value)} } />
+                    <Label
+                        className="label_search-form" 
+                        htmlFor="input_search-form" 
+                        text="Type the name of an Instagram account" 
+                    />
+                    <Input 
+                        id="input_search-form" 
+                        className="input_search-form" 
+                        placeholder="username" 
+                        type="text" 
+                        value={value} 
+                        onChange={e => {setValue(e.target.value)} } 
+                    />
                     <span className="search-form__input-badge">@</span>
                 </form>
             </section>
