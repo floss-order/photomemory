@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import './Footer.css'
 import List from './List'
 import ListItem from './ListItem'
+import Link from './Link'
 
 function Footer({ className }) {
     const classes = classNames(
@@ -17,19 +18,19 @@ function Footer({ className }) {
             <nav>
                 <List>
                     <ListItem>
-                        Contact
+                        <Link className="link_black" to="/about/contact">Contact</Link>
                     </ListItem>
 
                     <ListItem>
-                        FAQ
+                        <Link className="link_black" to="/about/faq">FAQ</Link>
                     </ListItem>
 
                     <ListItem>
-                        Privacy policy
+                        <Link className="link_black" to="/about/privacy_policy">Privacy policy</Link>
                     </ListItem>
                     
                     <ListItem>
-                        Terms of service
+                        <Link className="link_black" to="/about/terms_of_service">Terms of service</Link>
                     </ListItem>
                 </List>
             </nav>

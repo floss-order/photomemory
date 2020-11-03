@@ -1,0 +1,16 @@
+@import './colors.css';
+
+.link, 
+.link:visited {
+    text-decoration: none;
+}
+
+.link:active, 
+.link:hover,
+.link:focus {
+    color: var(--color-blue-violet);
+}
+
+.link_black {
+    color: black;
+}
