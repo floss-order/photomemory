@@ -7,7 +7,7 @@ import Button from './Button'
 
 function UsernameCard({ username, profile_pic_url, posts, followers, following }) {
     return (
-        <Card className="card__md">
+        <Card>
             <div className="card-container">
                 <figure className="card-avatar">
                     <img src={profile_pic_url} alt="Profile picture" className="card-avatar_image"/>
