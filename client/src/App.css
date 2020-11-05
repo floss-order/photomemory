@@ -12,23 +12,19 @@ body {
     background: var(--color-solitude);
 }
 
-.section {
+.flex {
     display: flex;
     flex-direction: column;
 }
 
-.section--justify-center {
+.flex_justify-center {
     justify-content: center;
 }
 
-.section--align-center {
+.flex_align-center {
     align-items: center;
 }
 
-.section_heading {
-    margin: 3.75rem 0;
-    font-weight: 700;
-    font-size: 3.125rem;
-    line-height: 1.5;
-    text-align: center;
+.mt_5 {
+    margin-top: 5rem;
 }
