@@ -36,8 +36,8 @@ function Home() {
 
     return (
         <>
-            <section className="hero section section--justify-center section--align-center">
-                <h1 className="section_heading">
+            <section className="hero flex flex_justify-center flex_align-center">
+                <h1 className="section-heading">
                     Turn the brightest moments of your life from the Instagram 
                     into photobook with PhotoMemory!
                 </h1>
@@ -60,8 +60,8 @@ function Home() {
             </section>
 
             {isSubmit &&
-                <section className="account section section--align-center" ref={sectionRef}>
-                    <h1 className="section_heading">Account has been found!</h1>
+                <section className="account flex flex_justify-center flex_align-center" ref={sectionRef}>
+                    <h1 className="section-heading">Account has been found!</h1>
                     <UsernameCard 
                         username={account.username} 
                         profile_pic_url={account.profile_pic_url} 
