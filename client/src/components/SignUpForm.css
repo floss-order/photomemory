@@ -1,0 +1,22 @@
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-form__heading {
+    text-align: center;
+    margin-bottom: 3.75rem;
+}
+
+.sign-up-form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 20px; 
+}
+
+.sign-up-form__button {
+    margin-top: 2.5rem;
+    align-self: center;
+}
