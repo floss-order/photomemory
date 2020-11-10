@@ -1,7 +1,8 @@
 @import './colors.css';
 
 .error {
-    margin-bottom: 1.25rem;
+    /* margin: 1.25rem 0; */
+    margin-bottom: 0.75rem;
     font-size: 1.25rem;
     color: var(--color-red);
 }
