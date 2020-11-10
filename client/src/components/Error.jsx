@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 import './Error.css'
 
-function Error({ className, children }) {
+function Error({ className, text }) {
     const classes = classNames(
         'error',
         className
@@ -12,19 +12,19 @@ function Error({ className, children }) {
 
     return (
         <p className={classes}>
-            {children}
+            {text}
         </p>
     )
 }
 
 Error.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node
+    text: PropTypes.string
 }
 
 Error.defaultProps = {
     className: '',
-    children: null
+    text: ''
 }
 
 export default Error
