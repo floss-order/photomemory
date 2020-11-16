@@ -18,7 +18,11 @@ router.post('/sign-up', async (req, res) => {
     } 
     
     catch (error) {
-        res.status(400).send(error)
+        res.status(400).json({
+            "error": {
+                "description": error.message
+            }
+        })
     }
     
 })
@@ -31,6 +35,7 @@ router.get('/sign-in', (req, res) => {
 
 router.post('/sign-in', async (req, res) => {
     const { email, password } = req.body
+    console.log(email, password)
 
     try {
         const user = await User.signIn(email, password)
@@ -38,12 +43,17 @@ router.post('/sign-in', async (req, res) => {
         req.session.isSignedIn = true
         req.session.save(err => {
             if(err) throw err
-            res.redirect('/user/profile-info')
+            // res.redirect('/user/profile-info')
+            res.json(req.session)
         })
     }
 
     catch(error) {
-        res.status(400).send(`Эмммм, что-то не так - ${error}`)
+        res.status(400).json({
+            "error": {
+                "description": error.message
+            }
+        })
     }
  })
 
