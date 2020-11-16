@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:instagramUserName', async (req, res) => {    
+
     try {
         const userMeta = await instaTouch.getUserMeta(req.params.instagramUserName)
 
@@ -25,8 +26,18 @@ router.get('/:instagramUserName', async (req, res) => {
         }
         res.json(account)
 
-    } catch (error) {
-        console.log(error)
+    } 
+    
+    catch (error) {
+        
+        if(!error.message) {
+            res.status(404).json({
+                "error": {
+                    "description": "Cannot find the account"
+                }
+            })
+        }
+        
     }
 })
 
