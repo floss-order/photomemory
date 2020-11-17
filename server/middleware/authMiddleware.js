@@ -6,7 +6,11 @@ function checkAuth(req, res, next) {
 
 function requireAuth(req, res, next) {
     if(!req.session.isSignedIn) {
-        return res.redirect('/')
+        return res.status(401).json({
+            "error": {
+                "description": "Forbidden. Register or sign in"
+            }
+        })
     }
     next()
 }
