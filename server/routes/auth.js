@@ -31,15 +31,13 @@ router.get('/sign-in', (req, res) => {
 
 router.post('/sign-in', async (req, res) => {
     const { email, password } = req.body
-    console.log(email, password)
 
     try {
         const user = await User.signIn(email, password)
         req.session.user = user
         req.session.isSignedIn = true
-        req.session.save(err => {
-            if(err) throw err
-            // res.redirect('/user/profile-info')
+        req.session.save(error => {
+            if(error) throw error
             res.json(req.session)
         })
     }
@@ -55,9 +53,8 @@ router.post('/sign-in', async (req, res) => {
 
 //Sign out the user
 router.post('/sign-out', (req, res) => {
-    req.session.destroy(err => {
-        if(err) throw err
-        res.redirect('/')
+    req.session.destroy(error => {
+        if(error) throw error
     })
 })
 
