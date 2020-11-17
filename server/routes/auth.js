@@ -18,11 +18,7 @@ router.post('/sign-up', async (req, res) => {
     } 
     
     catch (error) {
-        res.status(400).json({
-            "error": {
-                "description": error.message
-            }
-        })
+        res.status(400).json(error)
     }
     
 })
