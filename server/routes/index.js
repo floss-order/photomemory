@@ -1,17 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const bodyParser = require('body-parser')
-const instaparse = require('../parser/instagram/instaparse.js')
 const instaTouch = require('instatouch')
 
 
-//Index page
-router.get('/', async (req, res) => {
-    //let data = await instaparse.startParse('ggntu_highpark')
-    const page = { title: 'PhotoMemory' }
-    res.render('index.ejs', { page })
-})
-
+//Fetch account info
 router.get('/:instagramUserName', async (req, res) => {    
 
     try {
