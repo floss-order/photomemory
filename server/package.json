@@ -23,6 +23,8 @@
     "express-session": "^1.17.1",
     "instatouch": "^2.2.7",
     "mongoose": "^5.10.0",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "mongoose-validation-error-transform": "0.0.6",
     "validator": "^13.1.1"
   },
   "devDependencies": {

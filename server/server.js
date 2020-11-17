@@ -2,7 +2,6 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
-const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
@@ -21,7 +20,7 @@ app.set('layout', 'layouts/layout.ejs')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(cors())
-app.use(bodyParser.urlencoded( { limit: '10mb', extended: false } ))
+app.use(express.json())
 app.use(session({
     name: 'user_id',
     secret: process.env.SESSION_KEY,
