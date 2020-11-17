@@ -1,7 +1,16 @@
 const mongoose = require('mongoose')
 const { isEmail, isMobilePhone } = require('validator')
 const bcrypt = require('bcrypt')
- 
+const mongooseBeautifulUniqueValidation = require('mongoose-beautiful-unique-validation')
+const mongooseValidationErrorTransform = require('mongoose-validation-error-transform')
+
+mongoose.plugin(mongooseBeautifulUniqueValidation)
+mongoose.plugin(mongooseValidationErrorTransform, {
+    capitalize: false,
+    transform: function(messages) {
+        return messages.join(', ') 
+    }
+})
 
 //Define the user schema
 const userSchema = new mongoose.Schema({
@@ -29,7 +38,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true,
+        unique: '{VALUE} is already in use',
         validate: [isEmail, 'Please enter a valid email']
     },
 
