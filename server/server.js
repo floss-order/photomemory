@@ -39,12 +39,10 @@ app.use(session({
 app.use(authMiddleware.checkAuth)
 
 //Routes list
-const indexRouter = require('./routes/index.js')
+const instagramAPI = require('./api/instagram.js')
 const authRouter = require('./routes/auth.js')
-const userRouter = require('./routes/user.js')
-app.use('/', indexRouter)
+app.use('/api/instagram', instagramAPI)
 app.use('/auth', authRouter)
-app.use('/user', authMiddleware.requireAuth, userRouter)
 
 //Connect to the database and run the server
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true } )
