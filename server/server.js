@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const mongoose = require('mongoose')
 const session = require('express-session')
@@ -14,10 +13,6 @@ if(process.env.NODE_ENV === 'development') {
 
 
 //Server config
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
-app.set('layout', 'layouts/layout.ejs')
-app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(cors())
 app.use(express.json())
