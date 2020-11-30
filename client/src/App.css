@@ -12,6 +12,15 @@ body {
     background: var(--color-solitude);
 }
 
+html, body, #root {
+    height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
