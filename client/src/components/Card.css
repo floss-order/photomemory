@@ -5,5 +5,5 @@
 }
 
 .card__md {
-    min-width: 30%;
+    max-width: 30%;
 }
