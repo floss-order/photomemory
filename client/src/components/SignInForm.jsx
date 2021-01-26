@@ -21,11 +21,10 @@ function SignInForm() {
         } 
         
         catch (error) {
-
             setError('email',{
                 type: 'manual',
                 name: 'email',
-                message: error.error
+                message: error.error.description
             })
         }
 
