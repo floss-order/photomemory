@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { sendCredentials } from '../auth'
+import api from '../utils/api'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
@@ -35,18 +35,37 @@ function SignUpForm() {
         resolver: yupResolver(schema)
     })
 
-    async function onSubmit(credentials) {
+    async function onSubmit(data) {
         
         try {
-            const response = await sendCredentials('/auth/sign-up', credentials)
-            console.log(response)
-            
+            const response = await api.post('/auth/sign-up', data)
+
+            //Get the created user back and redirect
         }
 
         catch(error) {
-            console.log(errors)
-            console.log(error)
-        }
+
+            if(error.response) {
+                setError('email', {
+                    name: 'email',
+                    type: 'manual',
+                    message: error.response.data.errors.email.message
+                })
+            } 
+
+            // else if(error.request) {
+            //     setError('username', {
+            //         name: 'username',
+            //         type: 'manual',
+            //         message: 'Network error. Check your internet connection or try later.'
+            //     })
+            // }
+
+            // else {
+            //     throw error
+            // }
+
+        } 
 
     }
 
