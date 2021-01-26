@@ -39,6 +39,17 @@ const authRouter = require('./routes/auth.js')
 app.use('/api/instagram', instagramAPI)
 app.use('/auth', authRouter)
 
+//Error handing
+app.use(function(error, req, res, next) {
+    console.error(error.stack)
+
+    res.status(500).json({
+        "error": {
+            "description": "Something broke!"
+        }
+    })
+})
+
 //Connect to the database and run the server
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true } )
     .then( () => {
