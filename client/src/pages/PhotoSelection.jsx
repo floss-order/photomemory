@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from '../components/Button'
 import Card from '../components/Card'
 
 import './PhotoSelection.css'
@@ -29,6 +30,10 @@ function PhotoSelection({ username }) {
                 {images.map(image => (
                     <img className="images__item" src={image.url} />)
                 )}
+            </div>
+            <div className="button-container">
+                <Button className="btn-sm btn-violet-inverted">back</Button>
+                <Button className="btn-sm btn-violet">next</Button>
             </div>
         </Card>
     )
