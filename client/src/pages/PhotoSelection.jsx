@@ -35,7 +35,13 @@ function PhotoSelection({ username }) {
             <h1 className="section-heading">Select photos</h1>
             <SelectionGallery images={images} />
             <div className="button-container">
-                <Button className="btn-sm btn-violet-inverted">back</Button>
+                <Link to="/">
+                    <Button 
+                    className="btn-sm btn-violet-inverted"
+                    to="/">
+                        back
+                    </Button>
+                </Link>
                 <Button className="btn-sm btn-violet">next</Button>
             </div>
         </Card>
