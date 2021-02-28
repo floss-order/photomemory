@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './Image.css'
 
 function Image({ selected, src, alt, onClick, ...attrs }) {
-    const [isSelected, setIsSelected] = useState(selected)
-
     return (
         <div className="image">
             <img 
