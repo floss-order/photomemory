@@ -7,13 +7,13 @@ function Image({ selected, src, alt, onClick, ...attrs }) {
         <div className="image">
             <img 
             className="image__img"
-            selected={isSelected} 
+            selected={selected} 
             onClick={onClick}
             src={src} 
             alt={alt} 
             {...attrs} 
             />
-            <div className={isSelected && "image__overlay"}></div>
+            <div className={selected ? "image__overlay" : undefined}></div>
         </div>
     )
 }
