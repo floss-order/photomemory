@@ -4,11 +4,10 @@ import './Image.css'
 
 function Image({ selected, src, alt, onClick, ...attrs }) {
     return (
-        <div className="image">
+        <div className="image" onClick={onClick}>
             <img 
             className="image__img"
             selected={selected} 
-            onClick={onClick}
             src={src} 
             alt={alt} 
             {...attrs} 
