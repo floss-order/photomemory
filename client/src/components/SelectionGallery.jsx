@@ -1,15 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import Image from './Image'
 
 import './SelectionGallery.css'
 
 function SelectionGallery({ images }) {
+    const [imgArr, setImgArr] = useState([])
+    
+    useEffect(() => {
+        setImgArr(images)
+    })
+
+    function handleImageClick(index) {
+        const selectedImgArr = [...imgArr]
+        selectedImgArr[index].selected = !imgArr[index].selected
+        setImgArr(selectedImgArr)
+    }
+
     return (
         <div className="selection-gallery">
-            {images.map((image, index) => (
+            {imgArr.map((img, index) => (
                 <Image 
                 key={index}
-                src={image.url}
+                src={img.url}
+                onClick={() => handleImageClick(index)}
+                selected={img.selected}
                 />
             ))}
         </div>
