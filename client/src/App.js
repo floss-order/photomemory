@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './App.css'
 import Container from './components/Container'
@@ -11,7 +11,6 @@ import PhotoSelection from './pages/PhotoSelection'
 import Editor from './pages/Editor'
 
 import { Switch, Route } from "react-router-dom"
-
 
 function App() {
   return (
